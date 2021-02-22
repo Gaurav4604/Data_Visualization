@@ -33,3 +33,13 @@ g + geom_point(aes(x = carat, y = price, color = color)) + facet_grid(cut~clarit
 ggplot(diamonds, aes(y = carat, x = 1)) + geom_boxplot()
 # box plot with multiple x parameters
 ggplot(diamonds, aes(y = carat, x = cut)) + geom_boxplot()
+# violin plot with multiple x parameters
+ggplot(diamonds, aes(y = carat, x = cut)) + geom_violin()
+
+# positioning of layers using the different plots
+ggplot(diamonds, aes(y = carat, x = cut)) + geom_violin() + geom_point()
+
+ggplot(diamonds, aes(y = carat, x = cut)) + geom_point() + geom_violin()
+
+# ggplot line graphs
+ggplot(economics, aes(x = date, y = pop)) + geom_line()
